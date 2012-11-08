@@ -1,0 +1,10 @@
+%h3 Nowe auto
+= simple_form_for @car do |f|
+  = f.error_notification
+  = f.input :make, autofocus: true, label: "Marka"
+  = f.input :model
+  = f.input :engine, label: "Silnik"
+  = f.input :year, label: "Rok"
+  = f.input :description, label: "Opis"
+  = f.input :price, label: "Cena"
+  = f.submit "Dodaj auto"

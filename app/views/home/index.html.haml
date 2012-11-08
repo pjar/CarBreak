@@ -1,4 +1,9 @@
-%h3 Home
-- @users.each do |user|
-  %p
-    User: #{link_to user.name, user}
+%h3 Auta
+= link_to new_car_path, class: "btn" do
+  %span.icon-plus
+  Dodaj
+
+.tabbable.tabs-right
+  %ul.nav.nav-tabs
+    - @cars.each do |car|
+      %li= link_to "#{car.make} #{car.model} #{car.engine} '#{car.year.to_s.last(2)}", car
